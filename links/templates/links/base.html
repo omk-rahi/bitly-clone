@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitly Clone - A simple link shortner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-orange-300">
+      <div class="container mx-auto py-2 flex justify-between">
+        <a href="/"><h1 class="text-2xl font-semibold">Bitly</h1></a>
+        <a class="bg-white py-2 px-4 rounded" href={% url "new-link" %}>New Link</a>
+      </div>
+    </header>
+    <div>{% block content %}{% endblock content %}</div>
+  </body>
+</html>

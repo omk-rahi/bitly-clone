@@ -1,0 +1,14 @@
+{% extends "links/base.html" %} {% block content %}
+<div class="container mx-auto mt-8 grid grid-cols-3 gap-8">
+  {% for link in links %}
+  <div class="bg-gray-100 mb-8 py-4 px-8 rounded">
+    <h2 class="font-semibold text-xl">{{link.name}}</h2>
+    <p>{{link.clicks}} clicks</p>
+    <a href="/{{link.slug}}" class="text-blue-700 mt-2" target="_blank"
+      >Visit &rarr;</a
+    >
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}
